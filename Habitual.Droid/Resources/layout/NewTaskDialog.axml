@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/descriptionNewTaskEntry"
+        android:hint="Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:imeOptions="actionDone" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskTypeGroup"
+        android:layout_margin="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Habit"
+            android:id="@+id/habitRadioSelection" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Routine"
+            android:id="@+id/routineRadioSelection" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todo"
+            android:id="@+id/todoRadioSelection" />
+    </RadioGroup>
+    <TextView
+        android:text="Difficulty"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:gravity="center" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1"
+        android:layout_margin="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Easy"
+            android:id="@+id/easyRadioSelection" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:id="@+id/mediumRadioSelection" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            android:id="@+id/hardRadioSelection" />
+        <RadioButton
+            android:text="Very Hard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/veryHardRadioSelection" />
+    </RadioGroup>
+    <TextView
+        android:text="Days Routine Active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/routineDaysActiveText"
+        android:gravity="center" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/routineTimingLayout"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/sundayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sundayCheckBox" />
+            <TextView
+                android:text="SU"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/suSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/mondayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mondayCheckBox" />
+            <TextView
+                android:text="MO"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/moSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/tuesdayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuesdayCheckBox" />
+            <TextView
+                android:text="TU"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tuSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/wednesdayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wednesdayCheckBox" />
+            <TextView
+                android:text="WE"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/thursdayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/thursdayCheckBox" />
+            <TextView
+                android:text="TH"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/thSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/fridayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fridayCheckBox" />
+            <TextView
+                android:text="FR"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/frSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/saturdayStack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saturdayCheckBox" />
+            <TextView
+                android:text="SA"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/saSelectionText"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

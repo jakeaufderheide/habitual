@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA3090FF-161D-445B-9FBE-27CD9E02F5AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Habitual.Core</RootNamespace>
+    <AssemblyName>Habitual.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Base\BaseTask.cs" />
+    <Compile Include="Entities\Difficulty.cs" />
+    <Compile Include="Entities\Habit.cs" />
+    <Compile Include="Entities\HabitLog.cs" />
+    <Compile Include="Entities\Reward.cs" />
+    <Compile Include="Entities\Routine.cs" />
+    <Compile Include="Entities\RoutineLog.cs" />
+    <Compile Include="Entities\TaskContainer.cs" />
+    <Compile Include="Entities\Todo.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Executors\Executor.cs" />
+    <Compile Include="Executors\Impl\TaskExecutor.cs" />
+    <Compile Include="Executors\MainThread.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\HabitRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\RewardRepository.cs" />
+    <Compile Include="Repositories\RoutineRepository.cs" />
+    <Compile Include="Repositories\TodoRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="UseCases\Base\AbstractInteractor.cs" />
+    <Compile Include="UseCases\BuyRewardInteractor.cs" />
+    <Compile Include="UseCases\CreateRewardInteractor.cs" />
+    <Compile Include="UseCases\CreateTodoInteractor.cs" />
+    <Compile Include="UseCases\DeleteRewardInteractor.cs" />
+    <Compile Include="UseCases\DeleteRoutineInteractor.cs" />
+    <Compile Include="UseCases\CreateHabitInteractor.cs" />
+    <Compile Include="UseCases\CreateRoutineInteractor.cs" />
+    <Compile Include="UseCases\DeleteHabitInteractor.cs" />
+    <Compile Include="UseCases\DeleteTodoInteractor.cs" />
+    <Compile Include="UseCases\GetAllRewardsInteractor.cs" />
+    <Compile Include="UseCases\GetPointsInteractor.cs" />
+    <Compile Include="UseCases\Base\Interactor.cs" />
+    <Compile Include="UseCases\CreateUserInteractor.cs" />
+    <Compile Include="UseCases\GetTaskContainerInteractor.cs" />
+    <Compile Include="UseCases\GetUserInteractor.cs" />
+    <Compile Include="UseCases\Impl\BuyRewardInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\CreateHabitInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\CreateRewardInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\CreateRoutineInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\CreateTodoInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\CreateUserInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\DeleteHabitInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\DeleteRewardInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\DeleteRoutineInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\DeleteTodoInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\GetAllRewardsInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\GetPointsInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\GetTaskContainerInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\GetUserInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\IncrementHabitInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\MarkRoutineDoneImpl.cs" />
+    <Compile Include="UseCases\Impl\MarkTodoDoneInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\SetAvatarInteractorImpl.cs" />
+    <Compile Include="UseCases\Impl\StoreUserLocalInteractorImpl.cs" />
+    <Compile Include="UseCases\IncrementHabitInteractor.cs" />
+    <Compile Include="UseCases\MarkRoutineDoneInteractor.cs" />
+    <Compile Include="UseCases\MarkTodoDoneInteractor.cs" />
+    <Compile Include="UseCases\SetAvatarInteractor.cs" />
+    <Compile Include="UseCases\StoreUserLocalInteractor.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

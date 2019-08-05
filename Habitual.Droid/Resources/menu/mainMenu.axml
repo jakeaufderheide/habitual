@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+  <item android:id="@+id/refresh"
+        android:title="Refresh"
+        android:showAsAction="always"/>
+  <item android:id="@+id/log_out"
+          android:title="Log Out"
+          android:showAsAction="never"/>
+</menu>
